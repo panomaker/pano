@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processing</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Видеообработка</h1>
+    <button id="startButton">Запустить обработку</button>
+    <p id="status">Ожидание запуска...</p>
+
+    <script>
+        $('#startButton').on('click', function() {
+            $.get('/start_process', function(data) {
+                $('#status').text("Процесс запущен, обновляем статус...");
+                updateStatus();
+            });
+        });
+
+        function updateStatus() {
+            $.get('/get_status', function(data) {
+                $('#status').text(data.status);
+                if (data.status !== "Обработка завершена.") {
+                    setTimeout(updateStatus, 1000); // Обновляем статус каждую секунду
+                }
+            });
+        }
+    </script>
+</body>
+</html>

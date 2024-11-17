@@ -1,0 +1,261 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 20241110 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.kirik1402.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1997                
+POS_TIME 2669                
+POS_VISITOR 6187                
+POS_DAY 6689                
+POS_DOMAIN 3212                
+POS_LOGIN 3498                
+POS_ROBOT 3653                
+POS_WORMS 3898                
+POS_EMAILSENDER 4029                
+POS_EMAILRECEIVER 4172                
+POS_SESSION 6771                
+POS_SIDER 6918                
+POS_FILETYPES 4307                
+POS_DOWNLOADS 4422                
+POS_OS 4470                
+POS_BROWSER 4575                
+POS_SCREENSIZE 4782                
+POS_UNKNOWNREFERER 4856                
+POS_UNKNOWNREFERERBROWSER 4943                
+POS_ORIGIN 5025                
+POS_SEREFERRALS 5157                
+POS_PAGEREFS 5301                
+POS_SEARCHWORDS 5486                
+POS_KEYWORDS 5638                
+POS_MISC 2333                
+POS_ERRORS 5697                
+POS_CLUSTER 3354                
+POS_SIDER_404 5784                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20241111015054 1 0 10969137448242
+FirstTime 20241110013810
+LastTime 20241110231733
+LastUpdate 20241112001929 1 0 0 0 0
+TotalVisits 11                  
+TotalUnique 11                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 11                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavascriptDisabled 0 0 0
+JavaEnabled 0 0 0
+PDFSupport 0 0 0
+FlashSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+DirectorSupport 0 0 0
+TotalMisc 0 0 0
+RealPlayerSupport 0 0 0
+AddToFavourites 0 5 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 4 6 1506741 0 4 4176
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 0 0 0 0 0 0
+5 2 2 3396 0 2 72468
+6 2 2 3396 0 2 72468
+7 1 1 1698 0 0 0
+8 0 0 0 0 0 0
+9 0 0 0 4 12 3050760
+10 1 1 1698 0 0 0
+11 0 0 0 0 0 0
+12 0 0 0 0 0 0
+13 1 1 1698 0 0 0
+14 2 2 3396 0 0 0
+15 1 1 1698 0 0 0
+16 0 0 0 0 0 0
+17 0 0 0 2 6 1508439
+18 0 0 0 0 0 0
+19 0 0 0 0 0 0
+20 0 0 0 0 0 0
+21 1 1 1698 0 1 1048
+22 0 0 0 2 2 3396
+23 1 1 1698 1 1 1205
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 6
+ru 5 7 1508439
+us 4 4 6792
+in 2 2 3396
+nl 2 2 3396
+de 2 2 3396
+ca 1 1 1698
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 3
+Googlebot/ 10 3013482 20241110094307 0
+AhrefsBot/ 7 1510137 20241110220250 0
+SemrushBot/ 1 1698 20241110221035 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 3
+php 16 1076734 0 0
+jpg 1 438217 0 0
+js 1 12166 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 4
+win8 1 1
+macosx 2 2
+win10 6 6
+linux 9 7
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 8
+firefox19.0 1 1
+chrome125.0.0.0 1 1
+chrome129.0.0.0 4 4
+chrome124.0.0.0 4 4
+chrome120.0.0.0 1 1
+chrome110.0.5481.38 4 2
+firefox113.0 1 1
+chrome108.0.0.0 2 2
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 14 14
+From1 0 0
+From2 0 0
+From3 1 1
+From4 1 3
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+https://yapl.ru/ru/kirik1402.ru/ 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 1
+404 7 7473
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 3
+/archivarix.cms.php 1 http://kirik1402.ru/archivarix.cms.php
+/robots.txt 3 -
+/sitemap.txt 3 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 11
+195.211.77.142 4 6 1506741 20241110013834
+157.230.181.185 2 2 3396 20241110063113
+143.244.132.88 2 2 3396 20241110053125
+212.33.255.53 1 1 1698 20241110155650
+64.227.97.76 1 1 1698 20241110145757
+178.128.247.213 1 1 1698 20241110215407
+44.220.86.133 1 1 1698 20241110131153
+80.85.246.144 1 1 1698 20241110074643
+213.199.47.87 1 1 1698 20241110231733
+64.226.111.159 1 1 1698 20241110141454
+178.128.231.239 1 1 1698 20241110100950
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20241110 16 18 1527117 11
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 1
+0s-30s 11
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 2
+/ 15 23772 11 10
+/api/frames.php 1 1052962 0 1
+END_SIDER

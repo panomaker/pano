@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панорамное фото и карта</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #panorama-container {
+            height: 70vh;
+            width: 100vw;
+        }
+        #map-container {
+            height: 30vh;
+            width: 100vw;
+        }
+        #panorama {
+            width: 100%;
+            height: 100%;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .leaflet-div-icon {
+            background: none;
+            border: none;
+        }
+        .arrow-icon {
+            width: 30px;
+            height: 30px;
+            transform-origin: center;
+        }
+        /* Стили для кнопок */
+        .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Отступ между кнопками */
+        }
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="panorama-container">
+        <div id="panorama"></div>
+    </div>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <!-- Контейнер для кнопок -->
+    <div class="button-container">
+        <!-- Кнопка для копирования координат в буфер обмена -->
+        <button id="depth-button">Координаты</button>
+        
+        <!-- Кнопка для перехода в Fiji -->
+        <button id="fiji-button">Перейти в Fiji</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+    <script>
+        // Инициализация панорамного просмотра
+        var viewer = pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "panorama.jpg", // Путь к вашему панорамному изображению
+            "autoLoad": true,
+            "hfov": 100,
+            "yaw": 30, // Начальный азимут
+            "maxHfov": 120,
+            "minHfov": 60
+        });
+
+        var arrowIcon;
+        var coordinatesText = "";
+        var lat, lon;
+
+        // Функция для чтения EXIF данных и установки карты
+        function initializeMapWithExif(imageUrl) {
+            var img = new Image();
+            img.src = imageUrl;
+            img.onload = function() {
+                EXIF.getData(img, function() {
+                    lat = EXIF.getTag(this, "GPSLatitude");
+                    lon = EXIF.getTag(this, "GPSLongitude");
+                    var latRef = EXIF.getTag(this, "GPSLatitudeRef") || "N";
+                    var lonRef = EXIF.getTag(this, "GPSLongitudeRef") || "E";
+
+                    if (lat && lon) {
+                        lat = convertDMSToDD(lat, latRef);
+                        lon = convertDMSToDD(lon, lonRef);
+
+                        // Обновление текста кнопки с координатами
+                        coordinatesText = `${lat.toFixed(6)}, ${lon.toFixed(6)}`;
+                        var depthButton = document.getElementById('depth-button');
+                        depthButton.textContent = `Координаты: ${coordinatesText}`;
+
+                        // Инициализация карты Leaflet с 2ГИС
+                        var map = L.map('map').setView([lat, lon], 10);
+
+                        // Подключение 2ГИС карт
+                        L.tileLayer('https://tile2.maps.2gis.com/tiles?x={x}&y={y}&z={z}&v=1').addTo(map);
+
+                        // Добавление маркера с кастомной стрелкой
+                        arrowIcon = L.divIcon({
+                            className: 'leaflet-div-icon',
+                            html: `<svg class="arrow-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="50,0 100,100 50,75 0,100" fill="red" />
+                                  </svg>`,
+                            iconSize: [30, 30]
+                        });
+
+                        L.marker([lat, lon], {
+                            icon: arrowIcon
+                        }).addTo(map);
+                    } else {
+                        console.error('Не удалось получить GPS-координаты из метаданных изображения.');
+                    }
+                });
+            };
+        }
+
+        // Функция для преобразования координат из формата DMS в DD
+        function convertDMSToDD(coord, ref) {
+            var degrees = coord[0];
+            var minutes = coord[1] / 60;
+            var seconds = coord[2] / 3600;
+            var decimal = degrees + minutes + seconds;
+            return (ref === "S" || ref === "W") ? -decimal : decimal;
+        }
+
+        // Функция для обновления угла поворота стрелки
+        function updateArrowRotation(yaw) {
+            var arrowSvgElement = document.querySelector('.arrow-icon');
+            if (arrowSvgElement) {
+                arrowSvgElement.style.transform = `rotate(${yaw}deg)`;
+            }
+        }
+
+        // Подписка на события изменения направления в панораме
+        viewer.on('scenechange', function() {
+            updateArrowRotation(viewer.getYaw());
+        });
+        viewer.on('animatefinished', function() {
+            updateArrowRotation(viewer.getYaw());
+        });
+        viewer.on('load', function() {
+            updateArrowRotation(viewer.getYaw());
+        });
+        viewer.on('yawchange', function() {
+            updateArrowRotation(viewer.getYaw());
+        });
+
+        // Загрузка панорамного изображения и установка карты
+        var imageUrl = "panorama.jpg"; // Путь к вашему панорамному изображению
+        initializeMapWithExif(imageUrl);
+
+        // Обработчик нажатия на кнопку для копирования координат в буфер обмена
+        var depthButton = document.getElementById('depth-button');
+        depthButton.addEventListener('click', function() {
+            if (coordinatesText) {
+                navigator.clipboard.writeText(coordinatesText).then(function() {
+                    alert('Координаты скопированы в буфер обмена: ' + coordinatesText);
+                }, function() {
+                    alert('Не удалось скопировать координаты.');
+                });
+            } else {
+                alert('Координаты еще не загружены.');
+            }
+        });
+
+        // Обработчик нажатия на кнопку для перехода в Fiji
+        var fijiButton = document.getElementById('fiji-button');
+        fijiButton.addEventListener('click', function() {
+            if (lat && lon) {
+                var fijiUrl = `fiji://view/lon=${lon.toFixed(6)}&lat=${lat.toFixed(6)}`;
+                window.location.href = fijiUrl;
+            } else {
+                alert('Координаты еще не загружены.');
+            }
+        });
+    </script>
+</body>
+</html>

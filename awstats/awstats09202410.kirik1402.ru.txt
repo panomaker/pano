@@ -1,0 +1,296 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 20240910 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.kirik1402.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1997                
+POS_TIME 2676                
+POS_VISITOR 3403                
+POS_DAY 3917                
+POS_DOMAIN 4067                
+POS_LOGIN 4359                
+POS_ROBOT 4514                
+POS_WORMS 4719                
+POS_EMAILSENDER 4850                
+POS_EMAILRECEIVER 4993                
+POS_SESSION 5069                
+POS_SIDER 5227                
+POS_FILETYPES 5441                
+POS_DOWNLOADS 5605                
+POS_OS 6169                
+POS_BROWSER 6294                
+POS_SCREENSIZE 6518                
+POS_UNKNOWNREFERER 6592                
+POS_UNKNOWNREFERERBROWSER 6707                
+POS_ORIGIN 6817                
+POS_SEREFERRALS 6950                
+POS_PAGEREFS 7094                
+POS_SEARCHWORDS 7242                
+POS_KEYWORDS 7394                
+POS_MISC 2340                
+POS_ERRORS 7453                
+POS_CLUSTER 4215                
+POS_SIDER_404 7555                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20240911000212 95 21477 12069833332139
+FirstTime 20240910042656
+LastTime 20240910181637
+LastUpdate 20240911001924 95 0 94 0 0
+TotalVisits 11                  
+TotalUnique 10                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 12                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+PDFSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+RealPlayerSupport 0 0 0
+FlashSupport 0 0 0
+AddToFavourites 0 3 0
+QuickTimeSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0
+2 0 0 0 0 0 0
+3 0 0 0 10 10 10464
+4 3 3 5094 0 1 1044
+5 0 0 0 0 0 0
+6 1 1 1698 2 2 3396
+7 0 0 0 0 0 0
+8 1 1 1698 2 15 326627
+9 0 0 0 0 0 0
+10 1 1 1698 0 0 0
+11 2 10 818785 0 0 0
+12 2 2 3396 0 1 36234
+13 0 0 0 6 8 2088
+14 0 0 0 0 0 0
+15 0 0 0 0 0 0
+16 0 0 0 0 0 0
+17 5 14 5083069 2 16 362861
+18 2 4 780245 0 1 36234
+19 0 0 0 2 2 1698
+20 0 0 0 0 0 0
+21 0 0 0 1 1 1205
+22 0 0 0 1 1 1044
+23 0 0 0 0 0 0
+END_TIME
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 12
+46.28.93.74 4 13 5081371 20240910172337
+149.88.106.146 2 2 3396 20240910175549
+74.125.210.202 2 6 422233 20240910114152
+5.35.45.166 2 4 780245 20240910181637
+194.67.223.29 2 2 3396 20240910042657
+212.81.38.51 1 1 1698 20240910042656
+176.53.222.222 1 1 1698 20240910121131
+213.199.47.87 1 1 1698 20240910104643
+193.233.233.29 1 1 1698 20240910123851
+23.111.114.116 1 1 1698 20240910062616
+74.125.210.200 0 3 300015 
+74.125.210.199 0 1 96537 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20240910 17 36 6695683 11
+END_DAY
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 6
+ru 9 18 5089861
+nl 2 4 780245
+sg 2 2 3396
+us 2 10 818785
+de 1 1 1698
+at 1 1 1698
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 2
+Googlebot/ 8 1698 20240910195017 0
+no_user_agent 2 3396 20240910062614 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Session range - Number of visits
+BEGIN_SESSION 2
+0s-30s 10
+5mn-15mn 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 4
+/ 12 20376 10 8
+/api/frames.php 3 2294049 0 2
+/php/stats.php 1 1188 0 1
+/stats.html 1 1685 1 0
+END_SIDER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 6
+js 3 29575 0 0
+html 1 1685 0 0
+jpg 7 3534745 0 0
+kml 6 808402 0 0
+css 3 5663 0 0
+php 16 2315613 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 6
+/uploads/tracks/2024/09/05/roadmoscow7@gmail.com_05-09-2024_05-09-2024.kml 1 0 83664
+/uploads/tracks/2024/08/20/11db8cf3-6bd3-49fe-a062-8629086db568.kml 1 0 6822
+/uploads/tracks/2024/08/20/roadmoscow7@gmail.com_20-08-2024_20-08-2024%20(1).kml 1 0 124335
+/uploads/tracks/2024/08/24/roadmoscow7@gmail.com_24-08-2024_24-08-2024.kml 1 0 405028
+/uploads/tracks/2024/08/09/roadmoscow7@gmail.com_09-08-2024_09-08-2024%20(2).kml 1 0 96537
+/uploads/tracks/2024/08/11/roadmoscow7@gmail.com_11-08-2024_11-08-2024.kml 1 0 92016
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 5
+win8 1 1
+android 2 2
+ios_iphone 4 2
+win10 27 10
+Unknown 2 2
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 9
+firefox19.0 1 1
+Unknown 2 2
+safari17.6 4 2
+chrome94.0.4606.61 1 1
+chrome128.0.0.0 23 6
+chrome95.0.4638.69 2 2
+chrome79.0.3945.93 1 1
+chrome79.0.3945.136 1 1
+firefox130.0 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 1
+GuzzleHttp/7 20240910042657
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+GuzzleHttp/7 20240910042657
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 13 13
+From1 0 0
+From2 0 0
+From3 0 0
+From4 4 23
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+404 43 45077
+415 2 624022
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 22
+/2020/wp-includes/wlwmanifest.xml 2 -
+/2019/wp-includes/wlwmanifest.xml 2 -
+/.git/config 1 -
+/test/wp-includes/wlwmanifest.xml 2 -
+/.env 4 -
+/wp-includes/ID3/license.txt 2 -
+/wp/wp-includes/wlwmanifest.xml 2 -
+/public/.env 1 -
+/wordpress/wp-includes/wlwmanifest.xml 2 -
+/.env.example 2 -
+/blog/wp-includes/wlwmanifest.xml 2 -
+/.env.bak 1 -
+/shop/wp-includes/wlwmanifest.xml 2 -
+/web/wp-includes/wlwmanifest.xml 2 -
+/cms/wp-includes/wlwmanifest.xml 2 -
+/archivarix.cms.php 1 http://kirik1402.ru/archivarix.cms.php
+/feed/ 2 -
+/robots.txt 3 -
+/site/wp-includes/wlwmanifest.xml 2 -
+/2021/wp-includes/wlwmanifest.xml 2 -
+/wp1/wp-includes/wlwmanifest.xml 2 -
+/.env.prod 2 -
+END_SIDER_404
